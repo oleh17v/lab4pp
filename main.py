@@ -1,7 +1,15 @@
-from flask import Flask
+from flask import Flask, Response
+import datetime
+
+
+from apischm.user import user
+from apischm.authentification import authentification
+from apischm.ad import advertisement
 
 app = Flask(__name__)
-
+app.register_blueprint(authentification)
+app.register_blueprint(advertisement)
+app.register_blueprint(user)
 
 @app.route('/api/v1/hello-world-3')
 def index():

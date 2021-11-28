@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('mysql+mysqlconnector://root:MyZno26112003@localhost:3306/lab6database')
+engine = create_engine('mysql+mysqlconnector://root:boborffrff@localhost:3306/lab61')
 
 Base = declarative_base()
 metadata = Base.metadata
@@ -18,7 +18,8 @@ class User(Base):
     username = Column(String(45), nullable=False)
     firstname = Column(String(45))
     lastname = Column(String(45))
-    password = Column(String(45))
+    password = Column(String(100))
+    email = Column(String(45))
     location_idlocation = Column(Integer, ForeignKey('location.idLocation'))
     advertisments = relationship("Advertisment", backref="user")
 
