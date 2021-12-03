@@ -4,11 +4,14 @@ from databaseinf.inserts import session
 from flask_bcrypt import Bcrypt
 from valid_schm import UserSchema
 from apischm.tablets import User
+from flask_httpauth import HTTPBasicAuth
+from apischm.user import auth
 
 authentification = Blueprint('authentification', __name__)
 bcrypt = Bcrypt()
 
 s = session()
+
 
 
 @authentification.route('/api/v1/authentication/register', methods=['POST'])
