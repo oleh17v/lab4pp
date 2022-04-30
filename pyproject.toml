@@ -6,6 +6,9 @@ authors = ["oleh17v <burik15v@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+SQLAlchemy = "^1.4.27"
+bcrypt = "^3.2.0"
+PyYAML = "^6.0"
 
 [tool.poetry.dev-dependencies]
 

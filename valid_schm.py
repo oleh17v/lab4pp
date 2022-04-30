@@ -11,7 +11,8 @@ class LocationSchema(Schema):
 
 
 class UserSchema(Schema):
-    username = fields.String(required=True, validate=Length(min=3))
+    # username = fields.String( required=True, validate=Length(min=3))
+    username = fields.String(validate=Length(min=3))
     firstname = fields.String(validate=Length(min=3))
     lastname = fields.String(validate=Length(min=3))
     email = fields.String(validate=Length(min=5))

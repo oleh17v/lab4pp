@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('mysql+mysqlconnector://root:boborffrff@localhost:3306/lab61')
+engine = create_engine('mysql+mysqlconnector://root:My1566@localhost/mydb')
 
 Base = declarative_base()
 metadata = Base.metadata
